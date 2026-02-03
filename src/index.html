@@ -1,55 +1,118 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Be My Valentine 💘</title>
-  <!-- Fonts: Playfair Display (headings) + Quicksand (body) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Be My Valentine 💘</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-  <main class="hero">
-    <div class="container">
-      <p class="intro">Hi Allaine Recil Sabareza, my love. I wanted to ask you in the traditional way, but you are not "just" kind of girl. You are someone truly special. I kept thinking about how I could show you, in a more meaningful and unique way, just how much you mean to me and how far I would go just to make you smile.<br><br>That is why I made this little webpage filled with our photos and memories, something from the heart and something that is just for you.</p>
-      <button id="openBtn" class="cta">Open the Card</button>
-      <div class="animation-layer" aria-hidden="true"></div>
-      <div id="heroLoader" class="hero-loader" aria-hidden="true" role="status" aria-live="polite">
-        <span class="visually-hidden">Loading photos…</span>
-        <div class="spinner" aria-hidden="true"></div>
-      </div>
 
-      <!-- Card unwrap animation overlay -->
-      <div id="cardWrap" class="card-wrap" aria-hidden="true" aria-label="Card animation">
-        <div class="card-body"></div>
-        <div class="card-lid left" aria-hidden="true"></div>
-        <div class="card-lid right" aria-hidden="true"></div>
-      </div>
+<main class="hero">
 
-    </div>
-  </main>
+<!-- MEMORY REELS BACKGROUND -->
+<div class="memory-bg">
 
-  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="modal-content">
-      <button id="closeModal" class="close">✕</button>
-      <h2>Will you be my <span class="valentine">Valentine</span>?</h2>
-      <p>So here I am, asking you in the most sincere way I can. Allaine Recil Sabareza, would you make me the happiest person and be my Valentine this year?</p>
-      <div class="choices">
-        <button class="choice yes" data-answer="Yes">Yes ❤️</button>
-      </div>
-      <form id="answerForm" class="hidden">
-        <label for="message">Message (optional)</label>
-        <textarea id="message" name="message" placeholder="Write something sweet..."></textarea>
-        <button type="submit" class="send">Send Answer</button>
-      </form>
-      <div id="result" class="result hidden"></div>
+<div class="reel-row"><div class="reel-track">
+<img src="photos/photo1.png">
+<img src="photos/photo2.png">
+<img src="photos/photo3.png">
+<img src="photos/photo4.png">
+<img src="photos/photo5.png">
+<img src="photos/photo6.png">
 
-    </div>
-  </div>
+<img src="photos/photo1.png">
+<img src="photos/photo2.png">
+<img src="photos/photo3.png">
+<img src="photos/photo4.png">
+<img src="photos/photo5.png">
+<img src="photos/photo6.png">
+</div></div>
 
 
-  <script src="js/script.js"></script>
+<div class="reel-row reverse"><div class="reel-track">
+<img src="photos/photo7.png">
+<img src="photos/photo8.png">
+<img src="photos/photo9.png">
+<img src="photos/photo10.png">
+<img src="photos/photo11.png">
+<img src="photos/photo12.png">
+
+<img src="photos/photo7.png">
+<img src="photos/photo8.png">
+<img src="photos/photo9.png">
+<img src="photos/photo10.png">
+<img src="photos/photo11.png">
+<img src="photos/photo12.png">
+</div></div>
+
+<div class="reel-row"><div class="reel-track">
+<img src="photos/photo13.png">
+<img src="photos/photo14.png">
+<img src="photos/photo15.png">
+<img src="photos/photo16.png">
+<img src="photos/photo17.png">
+<img src="photos/photo18.png">
+
+<img src="photos/photo13.png">
+<img src="photos/photo14.png">
+<img src="photos/photo15.png">
+<img src="photos/photo16.png">
+<img src="photos/photo17.png">
+<img src="photos/photo18.png">
+</div></div>
+
+</div>
+
+<div class="container intro-card">
+
+<p class="intro">
+Hi Allaine Recil Sabareza, my love. I wanted to ask you in the traditional way, but you are not "just" kind of girl. You are someone truly special. I kept thinking about how I could show you, in a more meaningful and unique way, just how much you mean to me and how far I would go just to make you smile.
+
+<br><br>
+
+That is why I made this little webpage filled with our photos and memories, something from the heart and something that is just for you.
+</p>
+
+<button id="openBtn" class="cta">Open the Letter 💌</button>
+
+</div>
+</main>
+
+<div id="fxLayer"></div>
+
+<!-- MODAL -->
+<div id="modal" class="modal" aria-hidden="true">
+<div class="modal-content envelope">
+
+<button id="closeModal" class="close">✕</button>
+<div class="env-flap"></div>
+
+<div class="env-paper">
+
+<h2>Will you be my <span class="valentine">Valentine</span>?</h2>
+
+<p class="modal-text">
+So here I am, asking you in the most sincere way I can. Allaine Recil Sabareza, would you make me the happiest person and be my Valentine this year? 💌
+</p>
+
+<button id="yesBtn" class="choice yes">Yes ❤️</button>
+<div id="result" class="result hidden"></div>
+
+</div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+(function(){ emailjs.init("neFVRxj6_gkekvmAN"); })();
+</script>
+
+<script src="js/script.js"></script>
 </body>
 </html>
